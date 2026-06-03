@@ -16,7 +16,7 @@ A Chrome/Edge Manifest V3 extension that reads the visible NYT Wordle board and 
 1. Open `chrome://extensions` or `edge://extensions`.
 2. Enable Developer mode.
 3. Click Load unpacked.
-4. Select this folder: `C:\Users\User\Projects\extensions\wordle-cheeto`.
+4. Select the downloaded folder "wordle-cheeto" and open.
 5. Open NYT Wordle, make a guess, then open the extension popup.
 
 ## Regenerate `words.json`
