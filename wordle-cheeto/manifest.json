@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Wordle Cheeto",
+  "description": "Reads the visible Wordle board and recommends candidate answers from a local word list.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://www.nytimes.com/games/wordle/*", "https://www.nytimes.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/games/wordle/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Wordle Cheeto",
+    "default_popup": "popup.html"
+  }
+}

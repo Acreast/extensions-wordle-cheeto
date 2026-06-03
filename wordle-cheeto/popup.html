@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wordle Cheeto</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>Wordle Cheeto</h1>
+          <p id="status">Loading word list...</p>
+        </div>
+        <button id="refresh" type="button" title="Read the current board">Refresh</button>
+      </header>
+
+      <section class="panel">
+        <div class="metric">
+          <span>Remaining</span>
+          <strong id="candidate-count">-</strong>
+        </div>
+        <div class="metric">
+          <span>Words</span>
+          <strong id="total-words">-</strong>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Guesses Read</h2>
+        <div id="guesses" class="guesses empty">No completed guesses detected yet.</div>
+      </section>
+
+      <section class="section">
+        <h2>Best Picks</h2>
+        <ol id="recommendations" class="word-list"></ol>
+      </section>
+
+      <section class="section">
+        <h2>Candidates</h2>
+        <div id="candidates" class="candidate-list"></div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
